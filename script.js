@@ -184,3 +184,72 @@ function validarTelefone(){
         msgErroTelefone.style.color = "green";
     }    
 }
+
+/**/
+// Função de validação do formulário de cadastro
+function validarFormulario() {
+    let valid = true;
+
+    // Verificar Nome
+    if (!verificarNome()) {
+        valid = false;
+    }
+
+    // Verificar E-mail
+    if (!verificarEmail()) {
+        valid = false;
+    }
+
+    // Verificar Senha
+    if (!validaSenha()) {
+        valid = false;
+    }
+
+    // Verificar Confirmação de Senha
+    if (!confirmarSenha()) {
+        valid = false;
+    }
+
+    // Verificar Telefone
+    if (!validatelefone()) {
+        valid = false;
+    }
+
+    // Verificar Cidade
+    if (!validacidade()) {
+        valid = false;
+    }
+
+    // Verificar Estado
+    if (!validaestado()) {
+        valid = false;
+    }
+
+    // Verificar CPF
+    if (!validacpf()) {
+        valid = false;
+    }
+
+    // Verificar CNPJ
+    if (!validacnpj()) {
+        valid = false;
+    }
+
+    // Verificar CEP
+    if (!validacep()) {
+        valid = false;
+    }
+
+    // Verificar Data de Nascimento
+    if (!validanasc()) {
+        valid = false;
+    }
+
+    // Se algum campo for inválido, o formulário não será enviado
+    if (!valid) {
+        return false; // Impede o envio do formulário
+    }
+
+    // Se tudo estiver correto, o formulário será enviado
+    return true;
+}

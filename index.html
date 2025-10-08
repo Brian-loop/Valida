@@ -68,7 +68,7 @@
                                         <div class="form-group left-inner-addon">
                                             <i class="bi bi-geo-alt"></i>
                                             <input type="text" class="form-control" id="telefone" name="telefone" 
-                                            placeholder="(XX) XXXXX-XXXX" required onblur="validarTelefone()" oninput="aplicarMascaraCPF(event)">
+                                            placeholder="(XX) XXXXX-XXXX" required oninput="aplicarMascaraTelefone(event)" onblur="validatelefone()" maxlength="14">
                                         <span id="mensagem-erro-telefone"></span>
                                         </div>
                                     </div>
@@ -88,7 +88,7 @@
                                                 <span id="mensagem-estado"></span>
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                                    <button type="submit" class="btn btn-primary" onclick="return validarFormulario()">Cadastrar</button>
                                 </form>
                             </div>
                         </div>
